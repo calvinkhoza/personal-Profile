@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cavin Khoza</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional inline styles for specific elements */
+        .about-info-item i {
+            color: var(--main-color);
+            font-size: 1.8rem;
+            margin-right: 1rem;
+        }
+        
+        .about-info-item span {
+            color: var(--main-color);
+            font-weight: 500;
+            margin-right: 0.5rem;
+            min-width: 12rem;
+            display: inline-block;
+        }
+        
+        .resume-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+            border-left: 0.3rem solid var(--main-color);
+        }
+        
+        .project-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-0.5rem);
+        }
+        
+        .certificate {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+            border-left: 0.3rem solid var(--main-color);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <a href="#" class="logo">Cavin.</a>
+
+        <i class='bx bx-menu' id="menu-icon"></i> 
+        <nav>
+            <a href="" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#resume">Resume</a>
+            <a href="#projects">Projects</a>
+            <a href="#certifications">Certificates</a>
+            <a href="#contact">Contact Me</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home active" id="home">
+        <div class="home-detail">
+            <h1>Cavin Khoza</h1>
+            <h2>I am a
+                <span style="--i:4" data-text="DevOps Engineer">DevOps Engineer</span>
+                <span style="--i:3" data-text="Linux Engineer">Linux Engineer</span>
+                <span style="--i:2" data-text="Solution Architecture">Solution Architecture</span>
+                <span style="--i:1" data-text="Full Stack Developer">Full Stack Developer</span>
+            </h2>
+            <p>Welcome to my personal profile. I'm a passionate DevOps Engineer with expertise in building scalable, reliable, and efficient infrastructure. My focus is on implementing CI/CD pipelines, infrastructure as code, and cloud-native solutions to accelerate software delivery while maintaining high standards of quality and security.</p>
+            <div class="btn-sci">
+                <a href="#" class="btn">Download CV</a>
+                <div class="sci">
+                    <a href="#"><i class="bx bxl-github"></i></a>
+                    <a href="#"><i class="bx bxl-linkedin"></i></a>
+                    <a href="#"><i class="bx bxl-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-img">
+            <div class="img-box">
+                <div class="img-item">
+                    <img src="./assets/images/me.jpg" alt="my picture">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container section-title" style="text-align: center; margin-bottom: 4rem;">
+            <h2 style="font-size: 4rem; font-weight: 700; color: var(--white-color); margin-bottom: 1.5rem;">About</h2>
+            <p style="font-size: 1.6rem; color: var(--white-color); max-width: 800px; margin: 0 auto; line-height: 1.6;">
+                As a highly motivated and detail-oriented DevOps Engineer, I leverage my passion for cloud computing,
+                automation, and collaboration to drive innovation and efficiency. With a strong foundation in designing, 
+                implementing, and maintaining scalable, secure, and efficient infrastructure solutions, I excel in Agile 
+                environments and possess profound knowledge of version control systems and cloud platforms.
+            </p>
+        </div>
+
+        <div class="container" style="display: flex; align-items: center; gap: 5rem;">
+            <!-- Image Column -->
+            <div class="about-img" style="flex: 1;">
+                <div class="img-box" style="position: relative; width: 100%; height: 400px; border-radius: 1rem; overflow: hidden; border: 0.2rem solid var(--main-color); box-shadow: 0 0 2rem var(--main-color);">
+                    <div class="img-item" style="width: 100%; height: 100%;">
+                        <img src="./assets/images/Image.jpeg" alt="about me" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Content Column -->
+            <div class="content" style="flex: 1;">
+                <h2 style="font-size: 3rem; color: var(--main-color); margin-bottom: 2rem; position: relative;">
+                    DevOps and Solution Architecture
+                    <span style="content: ''; display: block; width: 80px; height: 4px; background: var(--main-color); margin-top: 15px;"></span>
+                </h2>
+                
+                <div class="row" style="margin-top: 30px; display: flex; flex-wrap: wrap; gap: 2rem;">
+                    <div class="col" style="flex: 1; min-width: 250px;">
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                                <i class='bx bxs-calendar' style="color: var(--main-color); font-size: 1.8rem; margin-right: 1rem;"></i>
+                                <div>
+                                    <strong style="display: block; color: var(--white-color); font-size: 1.6rem;">BIRTHDAY</strong>
+                                    <span style="color: var(--white-color); font-size: 1.4rem;">23 July 1998</span>
+                                </div>
+                            </li>
+                            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                                <i class='bx bx-globe' style="color: var(--main-color); font-size: 1.8rem; margin-right: 1rem;"></i>
+                                <div>
+                                    <strong style="display: block; color: var(--white-color); font-size: 1.6rem;">WEBSITE</strong>
+                                    <span style="color: var(--white-color); font-size: 1.4rem;">calvinkhoza1998@gmail.com</span>
+                                </div>
+                            </li>
+                            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                                <i class='bx bx-phone' style="color: var(--main-color); font-size: 1.8rem; margin-right: 1rem;"></i>
+                                <div>
+                                    <strong style="display: block; color: var(--white-color); font-size: 1.6rem;">PHONE</strong>
+                                    <span style="color: var(--white-color); font-size: 1.4rem;">+277 286 7492</span>
+                                </div>
+                            </li>
+                            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                                <i class='bx bxs-map' style="color: var(--main-color); font-size: 1.8rem; margin-right: 1rem;"></i>
+                                <div>
+                                    <strong style="display: block; color: var(--white-color); font-size: 1.6rem;">CITY</strong>
+                                    <span style="color: var(--white-color); font-size: 1.4rem;">Johannesburg, South Africa</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col" style="flex: 1; min-width: 250px;">
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                                <i class='bx bxs-user' style="color: var(--main-color); font-size: 1.8rem; margin-right: 1rem;"></i>
+                                <div>
+                                    <strong style="display: block; color: var(--white-color); font-size: 1.6rem;">AGE</strong>
+                                    <span style="color: var(--white-color); font-size: 1.4rem;">26</span>
+                                </div>
+                            </li>
+                            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                                <i class='bx bxs-award' style="color: var(--main-color); font-size: 1.8rem; margin-right: 1rem;"></i>
+                                <div>
+                                    <strong style="display: block; color: var(--white-color); font-size: 1.6rem;">QUALIFICATION</strong>
+                                    <span style="color: var(--white-color); font-size: 1.4rem;">Diploma</span>
+                                </div>
+                            </li>
+                            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                                <i class='bx bxs-envelope' style="color: var(--main-color); font-size: 1.8rem; margin-right: 1rem;"></i>
+                                <div>
+                                    <strong style="display: block; color: var(--white-color); font-size: 1.6rem;">EMAIL</strong>
+                                    <span style="color: var(--white-color); font-size: 1.4rem;">calvinkhoza1998@gmail.com</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills" style="padding: 10rem 9% 2rem; background: var(--second-bg-color);">
+        <div class="container section-title" style="text-align: center; margin-bottom: 4rem;">
+            <h2 style="font-size: 4rem; font-weight: 700; color: var(--white-color); margin-bottom: 1.5rem;">Skills</h2>
+            <p style="font-size: 1.6rem; color: var(--white-color); max-width: 800px; margin: 0 auto; line-height: 1.6;">
+                Below is the list of technical and soft skills that I possess
+            </p>
+        </div>
+
+        <div class="skills-container" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+            <!-- Technical Skills -->
+            <div class="skills-column" style="flex: 1; min-width: 300px; max-width: 500px;">
+                <h3 style="font-size: 2.5rem; color: var(--main-color); margin-bottom: 2rem; text-align: center;">Technical Skills</h3>
+                <div class="skill-item" style="margin-bottom: 2rem;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <span style="font-size: 1.6rem; color: var(--white-color);">AWS and Microsoft Azure</span>
+                        <span style="font-size: 1.6rem; color: var(--main-color);">100%</span>
+                    </div>
+                    <div style="height: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.5rem;">
+                        <div style="height: 100%; width: 100%; background: var(--main-color); border-radius: 0.5rem;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item" style="margin-bottom: 2rem;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <span style="font-size: 1.6rem; color: var(--white-color);">Automation and Scripting</span>
+                        <span style="font-size: 1.6rem; color: var(--main-color);">90%</span>
+                    </div>
+                    <div style="height: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.5rem;">
+                        <div style="height: 100%; width: 90%; background: var(--main-color); border-radius: 0.5rem;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item" style="margin-bottom: 2rem;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <span style="font-size: 1.6rem; color: var(--white-color);">Jenkins</span>
+                        <span style="font-size: 1.6rem; color: var(--main-color);">75%</span>
+                    </div>
+                    <div style="height: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.5rem;">
+                        <div style="height: 100%; width: 75%; background: var(--main-color); border-radius: 0.5rem;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item" style="margin-bottom: 2rem;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <span style="font-size: 1.6rem; color: var(--white-color);">Docker</span>
+                        <span style="font-size: 1.6rem; color: var(--main-color);">75%</span>
+                    </div>
+                    <div style="height: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.5rem;">
+                        <div style="height: 100%; width: 75%; background: var(--main-color); border-radius: 0.5rem;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item" style="margin-bottom: 2rem;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <span style="font-size: 1.6rem; color: var(--white-color);">Kubernetes</span>
+                        <span style="font-size: 1.6rem; color: var(--main-color);">75%</span>
+                    </div>
+                    <div style="height: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.5rem;">
+                        <div style="height: 100%; width: 75%; background: var(--main-color); border-radius: 0.5rem;"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Soft Skills -->
+            <div class="skills-column" style="flex: 1; min-width: 300px; max-width: 500px;">
+                <h3 style="font-size: 2.5rem; color: var(--main-color); margin-bottom: 2rem; text-align: center;">Soft Skills</h3>
+                <div class="skill-item" style="margin-bottom: 2rem;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <span style="font-size: 1.6rem; color: var(--white-color);">Problem Solving</span>
+                        <span style="font-size: 1.6rem; color: var(--main-color);">80%</span>
+                    </div>
+                    <div style="height: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.5rem;">
+                        <div style="height: 100%; width: 80%; background: var(--main-color); border-radius: 0.5rem;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item" style="margin-bottom: 2rem;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <span style="font-size: 1.6rem; color: var(--white-color);">Team Work</span>
+                        <span style="font-size: 1.6rem; color: var(--main-color);">90%</span>
+                    </div>
+                    <div style="height: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.5rem;">
+                        <div style="height: 100%; width: 90%; background: var(--main-color); border-radius: 0.5rem;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item" style="margin-bottom: 2rem;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <span style="font-size: 1.6rem; color: var(--white-color);">Interpersonal Skills</span>
+                        <span style="font-size: 1.6rem; color: var(--main-color);">55%</span>
+                    </div>
+                    <div style="height: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.5rem;">
+                        <div style="height: 100%; width: 55%; background: var(--main-color); border-radius: 0.5rem;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item" style="margin-bottom: 2rem;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <span style="font-size: 1.6rem; color: var(--white-color);">Time Management</span>
+                        <span style="font-size: 1.6rem; color: var(--main-color);">90%</span>
+                    </div>
+                    <div style="height: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.5rem;">
+                        <div style="height: 100%; width: 90%; background: var(--main-color); border-radius: 0.5rem;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item" style="margin-bottom: 2rem;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <span style="font-size: 1.6rem; color: var(--white-color);">Communication Skills</span>
+                        <span style="font-size: 1.6rem; color: var(--main-color);">90%</span>
+                    </div>
+                    <div style="height: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.5rem;">
+                        <div style="height: 100%; width: 90%; background: var(--main-color); border-radius: 0.5rem;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section class="resume" id="resume" style="padding: 10rem 9% 2rem; background: var(--bg-color);">
+        <div class="container section-title" style="text-align: center; margin-bottom: 4rem;">
+            <h2 style="font-size: 4rem; font-weight: 700; color: var(--white-color); margin-bottom: 1.5rem;">Resume</h2>
+            <p style="font-size: 1.6rem; color: var(--white-color); max-width: 800px; margin: 0 auto; line-height: 1.6;">
+                Welcome to my DevOps portfolio! I'm a passionate DevOps Engineer dedicated to bridging the gap between development and operations.
+            </p>
+        </div>
+
+        <div class="resume-container" style="display: flex; flex-wrap: wrap; gap: 3rem;">
+            <!-- Left Column -->
+            <div class="resume-column" style="flex: 1; min-width: 300px;">
+                <h3 style="font-size: 2.5rem; color: var(--main-color); margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem;">
+                    <i class='bx bx-user'></i> Summary
+                </h3>
+                
+                <div class="resume-item" style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 1rem; margin-bottom: 2rem; border-left: 0.3rem solid var(--main-color);">
+                    <h4 style="font-size: 2rem; color: var(--white-color); margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
+                        <i class='bx bx-rocket'></i> DevOps Engineer
+                    </h4>
+                    <p style="font-size: 1.4rem; color: var(--white-color); font-style: italic; margin-bottom: 1.5rem;">
+                        Innovative DevOps engineer and solution architect with expertise in automation, infrastructure optimization, and seamless deployment workflows.
+                    </p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem; font-size: 1.4rem; color: var(--white-color); display: flex; align-items: center; gap: 1rem;">
+                            <i class='bx bx-map'></i> Braamfontein, Johannesburg, GP
+                        </li>
+                        <li style="margin-bottom: 1rem; font-size: 1.4rem; color: var(--white-color); display: flex; align-items: center; gap: 1rem;">
+                            <i class='bx bx-phone'></i> (123) 456-7891
+                        </li>
+                        <li style="margin-bottom: 1rem; font-size: 1.4rem; color: var(--white-color); display: flex; align-items: center; gap: 1rem;">
+                            <i class='bx bx-envelope'></i> uvuafrica@gmail.com
+                        </li>
+                    </ul>
+                </div>
+                
+                <h3 style="font-size: 2.5rem; color: var(--main-color); margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem;">
+                    <i class='bx bx-book'></i> Education
+                </h3>
+                
+                <div class="resume-item" style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 1rem; margin-bottom: 2rem; border-left: 0.3rem solid var(--main-color); position: relative;">
+                    <div style="position: absolute; left: -1.5rem; top: 3rem; width: 3rem; height: 3rem; background: var(--main-color); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class='bx bxs-graduation' style="color: var(--bg-color); font-size: 1.5rem;"></i>
+                    </div>
+                    <h4 style="font-size: 2rem; color: var(--white-color); margin-bottom: 1rem;">System Support NQF Level 5</h4>
+                    <h5 style="font-size: 1.4rem; color: var(--white-color); background: rgba(255, 255, 255, 0.1); padding: 0.5rem 1rem; border-radius: 2rem; display: inline-block; margin-bottom: 1rem;">
+                        <i class='bx bx-calendar'></i> 2022 - 2023
+                    </h5>
+                    <p style="font-size: 1.4rem; color: var(--white-color); font-style: italic; margin-bottom: 1.5rem;">
+                        <i class='bx bx-building'></i> Gijima Technologies, Midrand
+                    </p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem; font-size: 1.4rem; color: var(--white-color); position: relative; padding-left: 2rem;">
+                            <i class='bx bx-check' style="position: absolute; left: 0; color: var(--main-color);"></i>
+                            Comprehensive system support training
+                        </li>
+                        <li style="margin-bottom: 1rem; font-size: 1.4rem; color: var(--white-color); position: relative; padding-left: 2rem;">
+                            <i class='bx bx-check' style="position: absolute; left: 0; color: var(--main-color);"></i>
+                            Server infrastructure management
+                        </li>
+                        <li style="margin-bottom: 1rem; font-size: 1.4rem; color: var(--white-color); position: relative; padding-left: 2rem;">
+                            <i class='bx bx-check' style="position: absolute; left: 0; color: var(--main-color);"></i>
+                            Security protocols and implementation
+                        </li>
+                    </ul>
+                    <div style="margin-top: 1.5rem;">
+                        <span style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: var(--white-color); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 1.2rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">
+                            System Administration
+                        </span>
+                        <span style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: var(--white-color); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 1.2rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">
+                            Infrastructure
+                        </span>
+                        <span style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: var(--white-color); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 1.2rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">
+                            Security
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="resume-item" style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 1rem; margin-bottom: 2rem; border-left: 0.3rem solid var(--main-color); position: relative;">
+                    <div style="position: absolute; left: -1.5rem; top: 3rem; width: 3rem; height: 3rem; background: var(--main-color); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class='bx bxs-graduation' style="color: var(--bg-color); font-size: 1.5rem;"></i>
+                    </div>
+                    <h4 style="font-size: 2rem; color: var(--white-color); margin-bottom: 1rem;">National Diploma in Computer Science</h4>
+                    <h5 style="font-size: 1.4rem; color: var(--white-color); background: rgba(255, 255, 255, 0.1); padding: 0.5rem 1rem; border-radius: 2rem; display: inline-block; margin-bottom: 1rem;">
+                        <i class='bx bx-calendar'></i> 2017 - 2020
+                    </h5>
+                    <p style="font-size: 1.4rem; color: var(--white-color); font-style: italic; margin-bottom: 1.5rem;">
+                        <i class='bx bx-building'></i> Tshwane University of Technology, Pretoria
+                    </p>
+                    <p style="font-size: 1.4rem; color: var(--white-color); margin-bottom: 1.5rem;">
+                        Specialized in software development, system analysis, database design, and networking with a focus on practical implementation and problem-solving methodologies.
+                    </p>
+                    <div style="margin-top: 1.5rem;">
+                        <span style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: var(--white-color); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 1.2rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">
+                            Software Development
+                        </span>
+                        <span style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: var(--white-color); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 1.2rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">
+                            System Analysis
+                        </span>
+                        <span style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: var(--white-color); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 1.2rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">
+                            Database Design
+                        </span>
+                        <span style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: var(--white-color); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 1.2rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">
+                            Networking
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Column -->
+            <div class="resume-column" style="flex: 1; min-width: 300px;">
+                <h3 style="font-size: 2.5rem; color: var(--main-color); margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem;">
+                    <i class='bx bx-briefcase'></i> Professional Experience
+                </h3>
+                
+                <div class="resume-item" style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 1rem; margin-bottom: 2rem; border-left: 0.3rem solid var(--main-color); position: relative;">
+                    <div style="position: absolute; left: -1.5rem; top: 3rem; width: 3rem; height: 3rem; background: var(--main-color); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class='bx bx-code-alt' style="color: var(--bg-color); font-size: 1.5rem;"></i>
+                    </div>
+                    <h4 style="font-size: 2rem; color: var(--white-color); margin-bottom: 1rem;">DevOps Engineer</h4>
+                    <h5 style="font-size: 1.4rem; color: var(--white-color); background: rgba(255, 255, 255, 0.1); padding: 0.5rem 1rem; border-radius: 2rem; display: inline-block; margin-bottom: 1rem;">
+                        <i class='bx bx-calendar'></i> 2024 - Present
+                    </h5>
+                    <p style="font-size: 1.4rem; color: var(--white-color); font-style: italic; margin-bottom: 1.5rem;">
+                        <i class='bx bx-building'></i> Capaciti, Braamfontein
+                    </p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem; font-size: 1.4rem; color: var(--white-color); position: relative; padding-left: 2rem;">
+                            <i class='bx bx-check' style="position: absolute; left: 0; color: var(--main-color);"></i>
+                            Testing, integrating, and deploying solutions to production environments
+                        </li>
+                        <li style="margin-bottom: 1rem; font-size: 1.4rem; color: var(--white-color); position: relative; padding-left: 2rem;">
+                            <i class='bx bx-check' style="position: absolute; left: 0; color: var(--main-color);"></i>
+                            Solution architecture design and implementation
+                        </li>
+                        <li style="margin-bottom: 1rem; font-size: 1.4rem; color: var(--white-color); position: relative; padding-left: 2rem;">
+                            <i class='bx bx-check' style="position: absolute; left: 0; color: var(--main-color);"></i>
+                            Automation and scripting for streamlined workflows
+                        </li>
+                        <li style="margin-bottom: 1rem; font-size: 1.4rem; color: var(--white-color); position: relative; padding-left: 2rem;">
+                            <i class='bx bx-check' style="position: absolute; left: 0; color: var(--main-color);"></i>
+                            CI/CD pipeline optimization and maintenance
+                        </li>
+                    </ul>
+                    <div style="margin-top: 1.5rem;">
+                        <span style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: var(--white-color); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 1.2rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">
+                            CI/CD
+                        </span>
+                        <span style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: var(--white-color); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 1.2rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">
+                            Automation
+                        </span>
+                        <span style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: var(--white-color); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 1.2rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">
+                            Cloud Architecture
+                        </span>
+                        <span style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: var(--white-color); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 1.2rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">
+                            Deployment
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="resume-item" style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 1rem; margin-bottom: 2rem; border-left: 0.3rem solid var(--main-color); position: relative;">
+                    <div style="position: absolute; left: -1.5rem; top: 3rem; width: 3rem; height: 3rem; background: var(--main-color); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class='bx bx-data' style="color: var(--bg-color); font-size: 1.5rem;"></i>
+                    </div>
+                    <h4 style="font-size: 2rem; color: var(--white-color); margin-bottom: 1rem;">Database Administrator & SAGE Specialist</h4>
+                    <h5 style="font-size: 1.4rem; color: var(--white-color); background: rgba(255, 255, 255, 0.1); padding: 0.5rem 1rem; border-radius: 2rem; display: inline-block; margin-bottom: 1rem;">
+                        <i class='bx bx-calendar'></i> 2023 - 2023
+                    </h5>
+                    <p style="font-size: 1.4rem; color: var(--white-color); font-style: italic; margin-bottom: 1.5rem;">
+                        <i class='bx bx-building'></i> Synkx, Lonehill, Sandton
+                    </p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem; font-size: 1.4rem; color: var(--white-color); position: relative; padding-left: 2rem;">
+                            <i class='bx bx-check' style="position: absolute; left: 0; color: var(--main-color);"></i>
+                            Advanced SQL and MongoDB data manipulation and optimization
+                        </li>
+                        <li style="margin-bottom: 1rem; font-size: 1.4rem; color: var(--white-color); position: relative; padding-left: 2rem;">
+                            <i class='bx bx-check' style="position: absolute; left: 0; color: var(--main-color);"></i>
+                            Data visualization and business intelligence using Power BI
+                        </li>
+                        <li style="margin-bottom: 1rem; font-size: 1.4rem; color: var(--white-color); position: relative; padding-left: 2rem;">
+                            <i class='bx bx-check' style="position: absolute; left: 0; color: var(--main-color);"></i>
+                            SAGE Evolution software installation and maintenance
+                        </li>
+                        <li style="margin-bottom: 1rem; font-size: 1.4rem; color: var(--white-color); position: relative; padding-left: 2rem;">
+                            <i class='bx bx-check' style="position: absolute; left: 0; color: var(--main-color);"></i>
+                            Performance monitoring and database optimization
+                        </li>
+                        <li style="margin-bottom: 1rem; font-size: 1.4rem; color: var(--white-color); position: relative; padding-left: 2rem;">
+                            <i class='bx bx-check' style="position: absolute; left: 0; color: var(--main-color);"></i>
+                            Comprehensive data backup and disaster recovery strategies
+                        </li>
+                        <li style="margin-bottom: 1rem; font-size: 1.4rem; color: var(--white-color); position: relative; padding-left: 2rem;">
+                            <i class='bx bx-check' style="position: absolute; left: 0; color: var(--main-color);"></i>
+                            Compliance auditing and regulatory adherence
+                        </li>
+                    </ul>
+                    <div style="margin-top: 1.5rem;">
+                        <span style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: var(--white-color); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 1.2rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">
+                            SQL
+                        </span>
+                        <span style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: var(--white-color); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 1.2rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">
+                            MongoDB
+                        </span>
+                        <span style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: var(--white-color); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 1.2rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">
+                            Power BI
+                        </span>
+                        <span style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: var(--white-color); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 1.2rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">
+                            SAGE Evolution
+                        </span>
+                        <span style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: var(--white-color); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 1.2rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">
+                            Data Analytics
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Download CV Button -->
+        <div style="text-align: center; margin-top: 4rem;">
+            <a href="#" class="btn" style="display: inline-block; padding: 1rem 3rem; background: var(--main-color); border: 0.2rem solid var(--main-color); border-radius: 4rem; font-size: 1.6rem; color: var(--bg-color); font-weight: 500; transition: 0.5s;">
+                Download CV
+            </a>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects" style="padding: 10rem 9% 2rem; background: var(--second-bg-color);">
+        <div class="container section-title" style="text-align: center; margin-bottom: 4rem;">
+            <h2 style="font-size: 4rem; font-weight: 700; color: var(--white-color); margin-bottom: 1.5rem;">Projects</h2>
+            <p style="font-size: 1.6rem; color: var(--white-color); max-width: 800px; margin: 0 auto; line-height: 1.6;">
+                Some of my featured projects and solutions.
+            </p>
+        </div>
+
+        <div class="projects-container" style="display: flex; flex-wrap: wrap; gap: 3rem; justify-content: center;">
+            <!-- Project 1 -->
+            <div class="project-card" style="width: 340px; background: rgba(255, 255, 255, 0.05); border-radius: 16px; overflow: hidden; transition: transform 0.3s ease;">
+                <div class="project-img" style="width: 100%; height: 180px; overflow: hidden;">
+                    <img src="./assets/images/leave.jpeg" alt="AI Leave Management System" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="project-info" style="padding: 2rem;">
+                    <h4 style="font-size: 2rem; color: var(--white-color); margin-bottom: 1rem;">AI Leave Management System</h4>
+                    <p style="font-size: 1.4rem; color: var(--white-color); margin-bottom: 1.5rem;">
+                        AI-powered leave management system for HR, automating leave requests, approvals, and analytics.
+                    </p>
+                    <div class="project-tech" style="margin-bottom: 1.5rem;">
+                        <span style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: var(--white-color); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 1.2rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">
+                            Python
+                        </span>
+                        <span style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: var(--white-color); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 1.2rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">
+                            Flask
+                        </span>
+                        <span style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: var(--white-color); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 1.2rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">
+                            AI
+                        </span>
+                    </div>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="https://github.com/calvinkhoza/AI-Leave-Management" class="btn" style="flex: 1; text-align: center; padding: 0.8rem; background: var(--main-color); color: var(--bg-color); border-radius: 0.5rem; font-size: 1.4rem; font-weight: 500;">
+                            Live Demo
+                        </a>
+                        <a href="https://github.com/calvinkhoza/AI-Leave-Management" class="btn" style="flex: 1; text-align: center; padding: 0.8rem; background: rgba(255, 255, 255, 0.1); color: var(--white-color); border-radius: 0.5rem; font-size: 1.4rem; font-weight: 500;">
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="project-card" style="width: 340px; background: rgba(255, 255, 255, 0.05); border-radius: 16px; overflow: hidden; transition: transform 0.3s ease;">
+                <div class="project-img" style="width: 100%; height: 180px; overflow: hidden;">
+                    <img src="./assets/images/eskom.png" alt="Smart Eskom System" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="project-info" style="padding: 2rem;">
+                    <h4 style="font-size: 2rem; color: var(--white-color); margin-bottom: 1rem;">Smart Eskom System</h4>
+                    <p style="font-size: 1.4rem; color: var(--white-color); margin-bottom: 1.5rem;">
+                        Smart grid monitoring and load management platform for energy efficiency and outage prediction.
+                    </p>
+                    <div class="project-tech" style="margin-bottom: 1.5rem;">
+                        <span style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: var(--white-color); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 1.2rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">
+                            IoT
+                        </span>
+                        <span style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: var(--white-color); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 1.2rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">
+                            Python
+                        </span>
+                        <span style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: var(--white-color); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 1.2rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">
+                            Energy
+                        </span>
+                    </div>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="https://github.com/calvinkhoza/Eskom-smart-system" class="btn" style="flex: 1; text-align: center; padding: 0.8rem; background: var(--main-color); color: var(--bg-color); border-radius: 0.5rem; font-size: 1.4rem; font-weight: 500;">
+                            Live Demo
+                        </a>
+                        <a href="https://github.com/calvinkhoza/Eskom-smart-system" class="btn" style="flex: 1; text-align: center; padding: 0.8rem; background: rgba(255, 255, 255, 0.1); color: var(--white-color); border-radius: 0.5rem; font-size: 1.4rem; font-weight: 500;">
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="project-card" style="width: 340px; background: rgba(255, 255, 255, 0.05); border-radius: 16px; overflow: hidden; transition: transform 0.3s ease;">
+                <div class="project-img" style="width: 100%; height: 180px; overflow: hidden;">
+                    <img src="./assets/images/bank.png" alt="Banking System" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="project-info" style="padding: 2rem;">
+                    <h4 style="font-size: 2rem; color: var(--white-color); margin-bottom: 1rem;">Banking System</h4>
+                    <p style="font-size: 1.4rem; color: var(--white-color); margin-bottom: 1.5rem;">
+                        Secure and scalable online banking platform with user authentication, account management, and transaction history.
+                    </p>
+                    <div class="project-tech" style="margin-bottom: 1.5rem;">
+                        <span style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: var(--white-color); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 1.2rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">
+                            Java
+                        </span>
+                        <span style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: var(--white-color); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 1.2rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">
+                            Spring Boot
+                        </span>
+                        <span style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: var(--white-color); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 1.2rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">
+                            MySQL
+                        </span>
+                    </div>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="https://github.com/calvinkhoza/Banking-system" class="btn" style="flex: 1; text-align: center; padding: 0.8rem; background: var(--main-color); color: var(--bg-color); border-radius: 0.5rem; font-size: 1.4rem; font-weight: 500;">
+                            Live Demo
+                        </a>
+                        <a href="https://github.com/calvinkhoza/Banking-system" class="btn" style="flex: 1; text-align: center; padding: 0.8rem; background: rgba(255, 255, 255, 0.1); color: var(--white-color); border-radius: 0.5rem; font-size: 1.4rem; font-weight: 500;">
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 4 -->
+            <div class="project-card" style="width: 340px; background: rgba(255, 255, 255, 0.05); border-radius: 16px; overflow: hidden; transition: transform 0.3s ease;">
+                <div class="project-img" style="width: 100%; height: 180px; overflow: hidden;">
+                    <img src="./assets/images/mine monitor.jpeg" alt="Safe Mine Monitor" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="project-info" style="padding: 2rem;">
+                    <h4 style="font-size: 2rem; color: var(--white-color); margin-bottom: 1rem;">Safe Mine Monitor</h4>
+                    <p style="font-size: 1.4rem; color: var(--white-color); margin-bottom: 1.5rem;">
+                        Real-time mine safety monitoring system with alerts for hazardous conditions and worker tracking.
+                    </p>
+                    <div class="project-tech" style="margin-bottom: 1.5rem;">
+                        <span style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: var(--white-color); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 1.2rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">
+                            IoT
+                        </span>
+                        <span style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: var(--white-color); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 1.2rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">
+                            Node.js
+                        </span>
+                        <span style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: var(--white-color); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 1.2rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">
+                            Safety
+                        </span>
+                    </div>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="https://github.com/calvinkhoza/Mine-Safety-Monitor" class="btn" style="flex: 1; text-align: center; padding: 0.8rem; background: var(--main-color); color: var(--bg-color); border-radius: 0.5rem; font-size: 1.4rem; font-weight: 500;">
+                            Live Demo
+                        </a>
+                        <a href="https://github.com/calvinkhoza/Mine-Safety-Monitor" class="btn" style="flex: 1; text-align: center; padding: 0.8rem; background: rgba(255, 255, 255, 0.1); color: var(--white-color); border-radius: 0.5rem; font-size: 1.4rem; font-weight: 500;">
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications" id="certifications" style="padding: 10rem 9% 2rem; background: var(--bg-color);">
+        <div class="container section-title" style="text-align: center; margin-bottom: 4rem;">
+            <h2 style="font-size: 4rem; font-weight: 700; color: var(--white-color); margin-bottom: 1.5rem;">Certificates</h2>
+            <p style="font-size: 1.6rem; color: var(--white-color); max-width: 800px; margin: 0 auto; line-height: 1.6;">
+                Professional certifications I've earned to validate my skills and knowledge.
+            </p>
+        </div>
+
+        <div class="certificates-container" style="display: flex; flex-wrap: wrap; gap: 3rem; justify-content: center;">
+            <!-- Certificate 1 -->
+            <div class="certificate" style="width: 340px; background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 1rem; border-left: 0.3rem solid var(--main-color);">
+                <div class="certificate-details">
+                    <h3 style="font-size: 2rem; color: var(--white-color); margin-bottom: 1rem;">Introduction to DevOps</h3>
+                    <p style="font-size: 1.4rem; color: var(--main-color); margin-bottom: 1rem;">IBM</p>
+                    <p style="font-size: 1.4rem; color: var(--white-color); margin-bottom: 1.5rem;">
+                        <strong>Issued:</strong> 2025
+                    </p>
+                    <a href="https://coursera.org/share/1f7ad599da426f1c7dcd11a377d0380d" class="btn" style="display: inline-block; padding: 1rem 2rem; background: var(--main-color); color: var(--bg-color); border-radius: 0.5rem; font-size: 1.4rem; font-weight: 500;">
+                        View Certificate
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Certificate 2 -->
+            <div class="certificate" style="width: 340px; background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 1rem; border-left: 0.3rem solid var(--main-color);">
+                <div class="certificate-details">
+                    <h3 style="font-size: 2rem; color: var(--white-color); margin-bottom: 1rem;">Introduction to Artificial Intelligence</h3>
+                    <p style="font-size: 1.4rem; color: var(--main-color); margin-bottom: 1rem;">IBM</p>
+                    <p style="font-size: 1.4rem; color: var(--white-color); margin-bottom: 1.5rem;">
+                        <strong>Issued:</strong> 2025
+                    </p>
+                    <a href="https://coursera.org/share/c241e87582ce90afa6d669d71ce433b1" class="btn" style="display: inline-block; padding: 1rem 2rem; background: var(--main-color); color: var(--bg-color); border-radius: 0.5rem; font-size: 1.4rem; font-weight: 500;">
+                        View Certificate
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Certificate 3 -->
+            <div class="certificate" style="width: 340px; background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 1rem; border-left: 0.3rem solid var(--main-color);">
+                <div class="certificate-details">
+                    <h3 style="font-size: 2rem; color: var(--white-color); margin-bottom: 1rem;">Continuous Delivery and DevOps</h3>
+                    <p style="font-size: 1.4rem; color: var(--main-color); margin-bottom: 1rem;">University of Virginia</p>
+                    <p style="font-size: 1.4rem; color: var(--white-color); margin-bottom: 1.5rem;">
+                        <strong>Issued:</strong> 2025
+                    </p>
+                    <a href="https://coursera.org/share/cd8d46eb524255fdb2970104f9be3e79" class="btn" style="display: inline-block; padding: 1rem 2rem; background: var(--main-color); color: var(--bg-color); border-radius: 0.5rem; font-size: 1.4rem; font-weight: 500;">
+                        View Certificate
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Certificate 4 -->
+            <div class="certificate" style="width: 340px; background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 1rem; border-left: 0.3rem solid var(--main-color);">
+                <div class="certificate-details">
+                    <h3 style="font-size: 2rem; color: var(--white-color); margin-bottom: 1rem;">Cloud Native, DevOps, Agile and NoSql</h3>
+                    <p style="font-size: 1.4rem; color: var(--main-color); margin-bottom: 1rem;">Coursera</p>
+                    <p style="font-size: 1.4rem; color: var(--white-color); margin-bottom: 1.5rem;">
+                        <strong>Issued:</strong> 2025
+                    </p>
+                    <a href="https://coursera.org/share/1737fb50bc03cce02e1cc34c95ff2e72" class="btn" style="display: inline-block; padding: 1rem 2rem; background: var(--main-color); color: var(--bg-color); border-radius: 0.5rem; font-size: 1.4rem; font-weight: 500;">
+                        View Certificate
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact" style="padding: 10rem 9% 2rem; background: var(--second-bg-color);">
+        <div class="container section-title" style="text-align: center; margin-bottom: 4rem;">
+            <h2 style="font-size: 4rem; font-weight: 700; color: var(--white-color); margin-bottom: 1.5rem;">Contact Me</h2>
+            <p style="font-size: 1.6rem; color: var(--white-color); max-width: 800px; margin: 0 auto; line-height: 1.6;">
+                Feel free to reach out to me for any questions or opportunities.
+            </p>
+        </div>
+
+        <div class="contact-container" style="display: flex; flex-wrap: wrap; gap: 3rem;">
+            <!-- Contact Info -->
+            <div class="contact-info" style="flex: 1; min-width: 300px;">
+                <div class="info-item" style="display: flex; align-items: flex-start; margin-bottom: 2rem;">
+                    <i class='bx bx-map' style="font-size: 2.5rem; color: var(--main-color); margin-right: 1.5rem;"></i>
+                    <div>
+                        <h3 style="font-size: 2rem; color: var(--white-color); margin-bottom: 0.5rem;">Address</h3>
+                        <p style="font-size: 1.4rem; color: var(--white-color);">1094, Luvuyo, roodekop</p>
+                    </div>
+                </div>
+                
+                <div class="info-item" style="display: flex; align-items: flex-start; margin-bottom: 2rem;">
+                    <i class='bx bx-phone' style="font-size: 2.5rem; color: var(--main-color); margin-right: 1.5rem;"></i>
+                    <div>
+                        <h3 style="font-size: 2rem; color: var(--white-color); margin-bottom: 0.5rem;">Phone</h3>
+                        <p style="font-size: 1.4rem; color: var(--white-color);">+27 74 286 7492</p>
+                    </div>
+                </div>
+                
+                <div class="info-item" style="display: flex; align-items: flex-start; margin-bottom: 2rem;">
+                    <i class='bx bx-envelope' style="font-size: 2.5rem; color: var(--main-color); margin-right: 1.5rem;"></i>
+                    <div>
+                        <h3 style="font-size: 2rem; color: var(--white-color); margin-bottom: 0.5rem;">Email</h3>
+                        <p style="font-size: 1.4rem; color: var(--white-color);">calvinkhoza1998@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="contact-form" style="flex: 1; min-width: 300px;">
+                <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 1.5rem; background: rgba(255, 255, 255, 0.1); border: none; border-radius: 0.5rem; color: var(--white-color); font-size: 1.4rem;">
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 1.5rem; background: rgba(255, 255, 255, 0.1); border: none; border-radius: 0.5rem; color: var(--white-color); font-size: 1.4rem;">
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Subject" required style="width: 100%; padding: 1.5rem; background: rgba(255, 255, 255, 0.1); border: none; border-radius: 0.5rem; color: var(--white-color); font-size: 1.4rem;">
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" required rows="6" style="width: 100%; padding: 1.5rem; background: rgba(255, 255, 255, 0.1); border: none; border-radius: 0.5rem; color: var(--white-color); font-size: 1.4rem;"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn" style="align-self: flex-start; padding: 1rem 3rem; background: var(--main-color); color: var(--bg-color); border: none; border-radius: 0.5rem; font-size: 1.6rem; font-weight: 500; cursor: pointer;">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="padding: 3rem 9%; background: var(--bg-color); text-align: center;">
+        <div class="footer-content">
+            <p style="font-size: 1.6rem; color: var(--white-color);">
+                © <span id="year"></span> Cavin Khoza. All Rights Reserved.
+            </p>
+            <div class="footer-social" style="margin-top: 2rem;">
+                <a href="#" style="display: inline-flex; justify-content: center; align-items: center; width: 4rem; height: 4rem; background: rgba(255, 255, 255, 0.1); border-radius: 50%; margin: 0 1rem; font-size: 2rem; color: var(--white-color); transition: 0.5s;">
+                    <i class='bx bxl-github'></i>
+                </a>
+                <a href="#" style="display: inline-flex; justify-content: center; align-items: center; width: 4rem; height: 4rem; background: rgba(255, 255, 255, 0.1); border-radius: 50%; margin: 0 1rem; font-size: 2rem; color: var(--white-color); transition: 0.5s;">
+                    <i class='bx bxl-linkedin'></i>
+                </a>
+                <a href="#" style="display: inline-flex; justify-content: center; align-items: center; width: 4rem; height: 4rem; background: rgba(255, 255, 255, 0.1); border-radius: 50%; margin: 0 1rem; font-size: 2rem; color: var(--white-color); transition: 0.5s;">
+                    <i class='bx bxl-youtube'></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Simple script for section switching
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all sections and nav links
+                document.querySelectorAll('section').forEach(section => {
+                    section.classList.remove('active');
+                });
+                document.querySelectorAll('nav a').forEach(navLink => {
+                    navLink.classList.remove('active');
+                });
+                
+                // Add active class to clicked nav link
+                this.classList.add('active');
+                
+                // Show corresponding section
+                const targetId = this.getAttribute('href');
+                if (targetId !== '#') {
+                    document.querySelector(targetId).classList.add('active');
+                }
+            });
+        });
+        
+        // Mobile menu toggle
+        const menuIcon = document.getElementById('menu-icon');
+        const nav = document.querySelector('nav');
+        
+        menuIcon.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            menuIcon.classList.toggle('bx-x');
+        });
+    </script>
+</body>
+</html>
