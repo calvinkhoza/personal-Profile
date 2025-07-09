@@ -109,4 +109,6 @@
         
         // Run on scroll
         window.addEventListener('scroll', animateSkills);
+
+        
     

@@ -1004,27 +1004,30 @@
       </div>
     </section>
   </div>
-  <div class="chatbot-container">
-    <button class="chatbot-toggle" aria-label="Open Chatbot" title="Open Chatbot">
-      <i class='bx bx-message-rounded-dots'></i>
-    </button>
-    <div class="chatbot-window">
-      <iframe
-        src="https://www.chatbase.co/chatbot-iframe/zhySVdbsPb92cug8i3Xr_"
-        width="100%"
-        style="height: 100%; min-height: 700px; border-radius: 1rem; box-shadow: 0 4px 32px rgba(0,0,0,0.25); background: #fff;"
-        frameborder="0"
-        class="chatbot-iframe"
-        allow="microphone"
-        title="AI Assistant"
-      ></iframe>
+  <!-- Chatbot Container -->
+    <div class="chatbot-container">
+        <button class="chatbot-toggle" aria-label="Toggle chatbot">
+            <i class='bx bx-message-rounded-dots'></i>
+        </button>
+        <div class="chatbot-window">
+            <iframe 
+                src="https://www.chatbase.co/chatbot-iframe/zhySVdbsPb92cug8i3Xr_"
+                width="100%"
+                style="height: 100%; min-height: 500px"
+                frameborder="0"
+                class="chatbot-iframe"
+                allow="microphone"
+                title="AI Assistant"
+                loading="lazy"
+            ></iframe>
+        </div>
     </div>
-  </div>
   <!-- Scroll Down Icon (bottom center) -->
     <button id="scroll-down-icon" aria-label="Scroll Down" style="position: fixed; left: 50%; transform: translateX(-50%); bottom: 2.5rem; z-index: 9999; background: transparent; border: none; outline: none; box-shadow: none; cursor: pointer; display: flex; align-items: center; justify-content: center;">
       <i class='bx bx-chevron-down' style="font-size: 3rem; color: var(--main-color); background: rgba(0,0,0,0.15); border-radius: 50%; padding: 0.5rem;"></i>
     </button>
-    <script>
+
+  <script>
       // Hamburger menu toggle for mobile
       const menuIcon = document.getElementById('menu-icon');
       const header = document.querySelector('header');
@@ -1106,7 +1109,51 @@
                 statusDiv.innerText = "Error: " + error.message;
             }
         });
-    </script>
-    
+    // Navbar active section highlight on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+      const sections = document.querySelectorAll('.container > section');
+      const navLinks = document.querySelectorAll('header nav a');
+      function activateNav() {
+        let scrollY = window.pageYOffset;
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 120;
+          const sectionHeight = section.offsetHeight;
+          if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            navLinks.forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('href').replace('#','') === section.id) {
+                link.classList.add('active');
+              }
+            });
+          }
+        });
+      }
+      window.addEventListener('scroll', activateNav);
+      // Also run on load in case not at top
+      activateNav();
+    });
+    // Chatbot Toggle Functionality
+    const chatbotContainer = document.querySelector('.chatbot-container');
+    const chatbotToggle = document.querySelector('.chatbot-toggle');
+
+    chatbotToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        chatbotContainer.classList.toggle('active');
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!chatbotContainer.contains(e.target)) {
+            chatbotContainer.classList.remove('active');
+        }
+    });
+
+    // Optional: Close with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            chatbotContainer.classList.remove('active');
+        }
+    });
+  </script>
 </body>
 </html>
