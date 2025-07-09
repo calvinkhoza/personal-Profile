@@ -58,7 +58,7 @@
 
         <i class='bx bx-menu' id="menu-icon"></i> 
         <nav>
-            <a href="" class="active">Home</a>
+            <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#resume">Resume</a>
@@ -82,9 +82,9 @@
             <div class="btn-sci">
                 <a href="#" class="btn">Download CV</a>
                 <div class="sci">
-                    <a href="#"><i class="bx bxl-github"></i></a>
-                    <a href="#"><i class="bx bxl-linkedin"></i></a>
-                    <a href="#"><i class="bx bxl-youtube"></i></a>
+                    <a href="https://github.com/calvinkhoza"><i class="bx bxl-github"></i></a>
+                    <a href="https://www.linkedin.com/in/calvin-khoza-csk1998/"><i class="bx bxl-linkedin"></i></a>
+                    <a href="https://www.facebook.com/in/calvin-khoza-csk1998/"><i class="bx bxl-facebook"></i></a>
                 </div>
             </div>
         </div>
@@ -204,53 +204,54 @@
             <!-- Technical Skills -->
             <div class="skills-column" style="flex: 1; min-width: 300px; max-width: 500px;">
                 <h3 style="font-size: 2.5rem; color: var(--main-color); margin-bottom: 2rem; text-align: center;">Technical Skills</h3>
+                
                 <div class="skill-item" style="margin-bottom: 2rem;">
                     <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
                         <span style="font-size: 1.6rem; color: var(--white-color);">AWS and Microsoft Azure</span>
-                        <span style="font-size: 1.6rem; color: var(--main-color);">100%</span>
+                        <span class="skill-percent" style="font-size: 1.6rem; color: var(--main-color);">0%</span>
                     </div>
-                    <div style="height: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.5rem;">
-                        <div style="height: 100%; width: 100%; background: var(--main-color); border-radius: 0.5rem;"></div>
+                    <div class="progress-bar" style="height: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.5rem; overflow: hidden;">
+                        <div data-width="100" style="height: 100%; width: 0; background: var(--main-color); border-radius: 0.5rem; transition: width 2s ease-in-out;"></div>
                     </div>
                 </div>
                 
                 <div class="skill-item" style="margin-bottom: 2rem;">
                     <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
                         <span style="font-size: 1.6rem; color: var(--white-color);">Automation and Scripting</span>
-                        <span style="font-size: 1.6rem; color: var(--main-color);">90%</span>
+                        <span class="skill-percent" style="font-size: 1.6rem; color: var(--main-color);">0%</span>
                     </div>
-                    <div style="height: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.5rem;">
-                        <div style="height: 100%; width: 90%; background: var(--main-color); border-radius: 0.5rem;"></div>
+                    <div class="progress-bar" style="height: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.5rem; overflow: hidden;">
+                        <div data-width="90" style="height: 100%; width: 0; background: var(--main-color); border-radius: 0.5rem; transition: width 2s ease-in-out;"></div>
                     </div>
                 </div>
                 
                 <div class="skill-item" style="margin-bottom: 2rem;">
                     <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
                         <span style="font-size: 1.6rem; color: var(--white-color);">Jenkins</span>
-                        <span style="font-size: 1.6rem; color: var(--main-color);">75%</span>
+                        <span class="skill-percent" style="font-size: 1.6rem; color: var(--main-color);">0%</span>
                     </div>
-                    <div style="height: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.5rem;">
-                        <div style="height: 100%; width: 75%; background: var(--main-color); border-radius: 0.5rem;"></div>
+                    <div class="progress-bar" style="height: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.5rem; overflow: hidden;">
+                        <div data-width="75" style="height: 100%; width: 0; background: var(--main-color); border-radius: 0.5rem; transition: width 2s ease-in-out;"></div>
                     </div>
                 </div>
                 
                 <div class="skill-item" style="margin-bottom: 2rem;">
                     <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
                         <span style="font-size: 1.6rem; color: var(--white-color);">Docker</span>
-                        <span style="font-size: 1.6rem; color: var(--main-color);">75%</span>
+                        <span class="skill-percent" style="font-size: 1.6rem; color: var(--main-color);">0%</span>
                     </div>
-                    <div style="height: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.5rem;">
-                        <div style="height: 100%; width: 75%; background: var(--main-color); border-radius: 0.5rem;"></div>
+                    <div class="progress-bar" style="height: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.5rem; overflow: hidden;">
+                        <div data-width="75" style="height: 100%; width: 0; background: var(--main-color); border-radius: 0.5rem; transition: width 2s ease-in-out;"></div>
                     </div>
                 </div>
                 
                 <div class="skill-item" style="margin-bottom: 2rem;">
                     <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
                         <span style="font-size: 1.6rem; color: var(--white-color);">Kubernetes</span>
-                        <span style="font-size: 1.6rem; color: var(--main-color);">75%</span>
+                        <span class="skill-percent" style="font-size: 1.6rem; color: var(--main-color);">0%</span>
                     </div>
-                    <div style="height: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.5rem;">
-                        <div style="height: 100%; width: 75%; background: var(--main-color); border-radius: 0.5rem;"></div>
+                    <div class="progress-bar" style="height: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.5rem; overflow: hidden;">
+                        <div data-width="75" style="height: 100%; width: 0; background: var(--main-color); border-radius: 0.5rem; transition: width 2s ease-in-out;"></div>
                     </div>
                 </div>
             </div>
@@ -261,50 +262,50 @@
                 <div class="skill-item" style="margin-bottom: 2rem;">
                     <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
                         <span style="font-size: 1.6rem; color: var(--white-color);">Problem Solving</span>
-                        <span style="font-size: 1.6rem; color: var(--main-color);">80%</span>
+                        <span class="skill-percent" style="font-size: 1.6rem; color: var(--main-color);">0%</span>
                     </div>
-                    <div style="height: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.5rem;">
-                        <div style="height: 100%; width: 80%; background: var(--main-color); border-radius: 0.5rem;"></div>
+                    <div class="progress-bar" style="height: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.5rem; overflow: hidden;">
+                        <div data-width="80" style="height: 100%; width: 0; background: var(--main-color); border-radius: 0.5rem; transition: width 2s ease-in-out;"></div>
                     </div>
                 </div>
                 
                 <div class="skill-item" style="margin-bottom: 2rem;">
                     <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
                         <span style="font-size: 1.6rem; color: var(--white-color);">Team Work</span>
-                        <span style="font-size: 1.6rem; color: var(--main-color);">90%</span>
+                        <span class="skill-percent" style="font-size: 1.6rem; color: var(--main-color);">0%</span>
                     </div>
-                    <div style="height: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.5rem;">
-                        <div style="height: 100%; width: 90%; background: var(--main-color); border-radius: 0.5rem;"></div>
+                    <div class="progress-bar" style="height: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.5rem; overflow: hidden;">
+                        <div data-width="90" style="height: 100%; width: 0; background: var(--main-color); border-radius: 0.5rem; transition: width 2s ease-in-out;"></div>
                     </div>
                 </div>
                 
                 <div class="skill-item" style="margin-bottom: 2rem;">
                     <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
                         <span style="font-size: 1.6rem; color: var(--white-color);">Interpersonal Skills</span>
-                        <span style="font-size: 1.6rem; color: var(--main-color);">55%</span>
+                        <span class="skill-percent" style="font-size: 1.6rem; color: var(--main-color);">0%</span>
                     </div>
-                    <div style="height: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.5rem;">
-                        <div style="height: 100%; width: 55%; background: var(--main-color); border-radius: 0.5rem;"></div>
+                    <div class="progress-bar" style="height: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.5rem; overflow: hidden;">
+                        <div data-width="55" style="height: 100%; width: 0; background: var(--main-color); border-radius: 0.5rem; transition: width 2s ease-in-out;"></div>
                     </div>
                 </div>
                 
                 <div class="skill-item" style="margin-bottom: 2rem;">
                     <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
                         <span style="font-size: 1.6rem; color: var(--white-color);">Time Management</span>
-                        <span style="font-size: 1.6rem; color: var(--main-color);">90%</span>
+                        <span class="skill-percent" style="font-size: 1.6rem; color: var(--main-color);">0%</span>
                     </div>
-                    <div style="height: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.5rem;">
-                        <div style="height: 100%; width: 90%; background: var(--main-color); border-radius: 0.5rem;"></div>
+                    <div class="progress-bar" style="height: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.5rem; overflow: hidden;">
+                        <div data-width="90" style="height: 100%; width: 0; background: var(--main-color); border-radius: 0.5rem; transition: width 2s ease-in-out;"></div>
                     </div>
                 </div>
                 
                 <div class="skill-item" style="margin-bottom: 2rem;">
                     <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
                         <span style="font-size: 1.6rem; color: var(--white-color);">Communication Skills</span>
-                        <span style="font-size: 1.6rem; color: var(--main-color);">90%</span>
+                        <span class="skill-percent" style="font-size: 1.6rem; color: var(--main-color);">0%</span>
                     </div>
-                    <div style="height: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.5rem;">
-                        <div style="height: 100%; width: 90%; background: var(--main-color); border-radius: 0.5rem;"></div>
+                    <div class="progress-bar" style="height: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.5rem; overflow: hidden;">
+                        <div data-width="90" style="height: 100%; width: 0; background: var(--main-color); border-radius: 0.5rem; transition: width 2s ease-in-out;"></div>
                     </div>
                 </div>
             </div>
@@ -1124,6 +1125,48 @@
                 messageElement.style.display = 'none';
             }, 5000);
         }
+        // Function to animate progress bars when section comes into view
+    function animateSkills() {
+        const skillSection = document.getElementById('skills');
+        const progressBars = document.querySelectorAll('.progress-bar div');
+        const skillPercents = document.querySelectorAll('.skill-percent');
+        
+        // Check if section is in view
+        const sectionPosition = skillSection.getBoundingClientRect();
+        const isVisible = (sectionPosition.top < window.innerHeight - 100) && (sectionPosition.bottom >= 0);
+        
+        if (isVisible && !skillSection.classList.contains('animated')) {
+            skillSection.classList.add('animated');
+            
+            progressBars.forEach((bar, index) => {
+                const width = bar.getAttribute('data-width');
+                bar.style.width = width + '%';
+                
+                // Animate percentage counter
+                let current = 0;
+                const target = parseInt(width);
+                const increment = target / 50; // Adjust speed
+                
+                const updatePercent = () => {
+                    current += increment;
+                    if (current < target) {
+                        skillPercents[index].textContent = Math.round(current) + '%';
+                        requestAnimationFrame(updatePercent);
+                    } else {
+                        skillPercents[index].textContent = target + '%';
+                    }
+                };
+                
+                updatePercent();
+            });
+        }
+    }
+    
+    // Run on initial load
+    document.addEventListener('DOMContentLoaded', animateSkills);
+    
+    // Run on scroll
+    window.addEventListener('scroll', animateSkills);
     </script>
 </body>
 </html>
