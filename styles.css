@@ -23,7 +23,12 @@ html {
 }
 
 body {
-    color: var(--white-color)
+    color: var(--white-color);
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
 }
 
 header {
@@ -64,19 +69,15 @@ nav a.active {
 }
 
 section {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    padding: 10rem 9% 2rem;
-    background: var(--bg-color);
-    visibility: hidden;
-    opacity: 0;
-    overflow: hidden;
-}
-section.active {
-    visibility: visible;
-    opacity: 1;
-    overflow: auto;
+  position: static;
+  width: 100%;
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+  background: var(--bg-color);
+  visibility: visible;
+  opacity: 1;
+  overflow: visible;
+  transition: none;
 }
 
 .home {
@@ -592,6 +593,45 @@ nav a:hover {
     box-shadow: 0 0 0 0.3rem var(--main-color);
 }
 
+/* --- Resume Item Glow Effect --- */
+.resume-item {
+  position: relative;
+  box-shadow: 0 0 0 rgba(124, 240, 61, 0);
+  transition: box-shadow 0.4s, transform 0.3s;
+}
+.resume-item:hover {
+  box-shadow: 0 0 2rem var(--main-color), 0 0 1rem var(--main-color);
+  transform: translateX(0.5rem) scale(1.03);
+  z-index: 2;
+}
+.resume-item:focus-within {
+  box-shadow: 0 0 2rem var(--main-color), 0 0 1rem var(--main-color);
+  transform: translateX(0.5rem) scale(1.03);
+  z-index: 2;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .resume-item.touch-hover {
+    box-shadow: 0 0 2rem var(--main-color), 0 0 1rem var(--main-color);
+    transform: translateX(0.5rem) scale(1.03);
+    z-index: 2;
+  }
+}
+
+@keyframes resume-glow {
+  from {
+    box-shadow: 0 0 1rem var(--main-color);
+  }
+  to {
+    box-shadow: 0 0 2.5rem var(--main-color);
+  }
+}
+.resume-item:hover,
+.resume-item.touch-hover {
+  animation: resume-glow 1.5s ease-in-out infinite alternate;
+}
+/* --- End Resume Item Glow Effect --- */
+
 /* Responsive Adjustments for Certificates */
 @media (max-width: 768px) {
     .certificates-container {
@@ -767,3 +807,188 @@ nav a:hover {
 .skill-item:hover .progress-bar div::after {
     transform: scaleX(1);
 }
+
+/* --- Project Card Glow Effect --- */
+.project-card {
+  position: relative;
+  box-shadow: 0 0 0 rgba(124, 240, 61, 0);
+  transition: box-shadow 0.4s, transform 0.3s;
+}
+.project-card:hover {
+  box-shadow: 0 0 2rem var(--main-color), 0 0 1rem var(--main-color);
+  transform: translateY(-0.5rem) scale(1.03);
+  z-index: 2;
+}
+.project-card:focus-within {
+  box-shadow: 0 0 2rem var(--main-color), 0 0 1rem var(--main-color);
+  transform: translateY(-0.5rem) scale(1.03);
+  z-index: 2;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .project-card.touch-hover {
+    box-shadow: 0 0 2rem var(--main-color), 0 0 1rem var(--main-color);
+    transform: translateY(-0.5rem) scale(1.03);
+    z-index: 2;
+  }
+}
+
+@keyframes project-glow {
+  from {
+    box-shadow: 0 0 1rem var(--main-color);
+  }
+  to {
+    box-shadow: 0 0 2.5rem var(--main-color);
+  }
+}
+.project-card:hover,
+.project-card.touch-hover {
+  animation: project-glow 1.5s ease-in-out infinite alternate;
+}
+/* --- End Project Card Glow Effect --- */
+
+/* --- Unified Glow and Hover Effects for .resume-item, .project-card, .skill-item, .certificate --- */
+.resume-item,
+.project-card,
+.skill-item,
+.certificate {
+  position: relative;
+  box-shadow: 0 0 0 rgba(124, 240, 61, 0);
+  transition: box-shadow 0.4s, transform 0.3s;
+}
+.resume-item:hover,
+.resume-item.touch-hover,
+.resume-item:focus-within,
+.project-card:hover,
+.project-card.touch-hover,
+project-card:focus-within,
+.skill-item:hover,
+.skill-item.touch-hover,
+.skill-item:focus-within,
+.certificate:hover,
+.certificate.touch-hover,
+.certificate:focus-within {
+  box-shadow: 0 0 2rem var(--main-color), 0 0 1rem var(--main-color);
+  z-index: 2;
+}
+.resume-item:hover,
+.resume-item.touch-hover,
+resume-item:focus-within {
+  transform: translateX(0.5rem) scale(1.03);
+}
+.project-card:hover,
+project-card.touch-hover,
+project-card:focus-within {
+  transform: translateY(-0.5rem) scale(1.03);
+}
+.skill-item:hover,
+.skill-item.touch-hover,
+.skill-item:focus-within {
+  transform: translateY(-0.3rem) scale(1.03);
+}
+.certificate:hover,
+.certificate.touch-hover,
+.certificate:focus-within {
+  transform: translateY(-0.5rem) scale(1.03);
+}
+@keyframes unified-glow {
+  from {
+    box-shadow: 0 0 1rem var(--main-color);
+  }
+  to {
+    box-shadow: 0 0 2.5rem var(--main-color);
+  }
+}
+.resume-item:hover,
+.resume-item.touch-hover,
+.resume-item:focus-within,
+.project-card:hover,
+project-card.touch-hover,
+project-card:focus-within,
+.skill-item:hover,
+.skill-item.touch-hover,
+skill-item:focus-within,
+.certificate:hover,
+.certificate.touch-hover,
+certificate:focus-within {
+  animation: unified-glow 1.5s ease-in-out infinite alternate;
+}
+/* --- End Unified Glow and Hover Effects --- */
+/* Chatbot Styles */
+.chatbot-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+  }
+  
+  .chatbot-toggle {
+    background: #2200493d;
+    color: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(114, 127, 222, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .chatbot-toggle:hover {
+    transform: scale(1.1);
+  }
+  
+  .chatbot-window {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    width: 350px;
+    height: 500px;
+    background: #080020b7;
+    border: 5px solid #727fde3d;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+  }
+  
+  .chatbot-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  /* Active state */
+  .chatbot-container.active .chatbot-window {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .chatbot-window {
+      width: 300px;
+      height: 450px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .chatbot-container {
+      bottom: 20px;
+      right: 20px;
+    }
+    
+    .chatbot-window {
+      width: calc(100vw - 40px);
+      right: -20px;
+    }
+  }
