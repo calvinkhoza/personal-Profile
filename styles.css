@@ -295,3 +295,475 @@ section.active {
     font-size: 1.4rem;
     color: var(--white-color);
 }
+/* Enhanced Hover Effects */
+.btn:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0.5rem 1.5rem rgba(124, 240, 61, 0.4);
+}
+
+nav a:hover {
+    text-shadow: 0 0 1rem var(--main-color);
+    transform: translateY(-0.2rem);
+}
+
+.home-detail .btn-sci .sci a:hover {
+    transform: translateY(-0.3rem) scale(1.1);
+}
+
+/* Glowing Effects */
+.logo {
+    transition: text-shadow 0.3s ease;
+}
+
+.logo:hover {
+    text-shadow: 0 0 1rem var(--main-color);
+}
+
+.section-title h2 {
+    position: relative;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5rem;
+    height: 0.3rem;
+    background: var(--main-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+    
+    .home-img .img-box {
+        width: 40vw;
+        height: 40vw;
+    }
+}
+
+@media (max-width: 991px) {
+    header {
+        padding: 2rem 3%;
+    }
+    
+    section {
+        padding: 10rem 3% 2rem;
+    }
+    
+    .home-img .img-box {
+        width: 45vw;
+        height: 45vw;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+    
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+    }
+    
+    nav.active {
+        display: block;
+    }
+    
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        text-align: center;
+    }
+    
+    .home {
+        flex-direction: column-reverse;
+        gap: 3rem;
+    }
+    
+    .home-img .img-box {
+        width: 70vw;
+        height: 70vw;
+    }
+    
+    .home-detail {
+        text-align: center;
+    }
+    
+    .home-detail .btn-sci {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    
+    .home-img .img-box {
+        width: 90vw;
+        height: 90vw;
+    }
+    
+    .btn {
+        padding: 0.8rem 2rem;
+    }
+}
+
+/* Additional Glow Effects */
+.home-img .img-box:hover::before,
+.home-img .img-box:hover::after {
+    animation: rotate-border 4s linear infinite, glow-border 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow-border {
+    from {
+        box-shadow: 0 0 1rem var(--main-color);
+    }
+    to {
+        box-shadow: 0 0 2.5rem var(--main-color);
+    }
+}
+
+.about-img .img-box:hover {
+    animation: glow-box 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow-box {
+    from {
+        box-shadow: 0 0 1rem var(--main-color);
+    }
+    to {
+        box-shadow: 0 0 3rem var(--main-color);
+    }
+}
+/* Add these at the end of your existing CSS */
+
+/* About Section Image Fix for Mobile */
+@media (max-width: 768px) {
+    .about-img .img-box {
+        height: 300px;
+        margin: 0 auto 3rem;
+        width: 90%;
+    }
+}
+
+@media (max-width: 450px) {
+    .about-img .img-box {
+        height: 250px;
+    }
+}
+
+/* Certificates Section Hover Effects */
+.certificates-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.certificate-box {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 0.2rem solid var(--second-bg-color);
+    transition: all 0.5s ease;
+    height: 250px;
+}
+
+.certificate-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.certificate-box:hover {
+    border-color: var(--main-color);
+    box-shadow: 0 0 2rem var(--main-color);
+    transform: translateY(-0.5rem);
+}
+
+.certificate-box:hover img {
+    transform: scale(1.05);
+}
+
+.certificate-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.8));
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.certificate-box:hover::before {
+    opacity: 1;
+}
+
+.certificate-box .certificate-info {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    background: rgba(31, 36, 45, 0.9);
+    z-index: 2;
+    transition: bottom 0.5s ease;
+}
+
+.certificate-box:hover .certificate-info {
+    bottom: 0;
+}
+
+/* Resume Section Hover Effects */
+.resume-item {
+    background: var(--second-bg-color);
+    border-left: 0.3rem solid var(--second-bg-color);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.resume-item:hover {
+    border-left-color: var(--main-color);
+    transform: translateX(0.5rem);
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0,0,0,0.2);
+}
+
+.resume-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0.5rem;
+    height: 100%;
+    background: var(--main-color);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s ease;
+}
+
+.resume-item:hover::before {
+    transform: scaleY(1);
+}
+
+.resume-item h3 {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.resume-item h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+    height: 1rem;
+    background: var(--main-color);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.resume-item:hover h3::before {
+    background: var(--white-color);
+    box-shadow: 0 0 0 0.3rem var(--main-color);
+}
+
+/* Responsive Adjustments for Certificates */
+@media (max-width: 768px) {
+    .certificates-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    .certificate-box {
+        height: 200px;
+    }
+}
+
+@media (max-width: 450px) {
+    .certificates-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .certificate-box {
+        height: 180px;
+    }
+}
+/* Add these at the end of your existing CSS */
+
+/* Skills Section Hover Effects */
+.skill-item {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+}
+
+.skill-item:hover {
+    background: rgba(124, 240, 61, 0.1);
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0.5rem 1.5rem rgba(124, 240, 61, 0.2);
+}
+
+.skill-item:hover .progress-bar div {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.skill-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0.5rem;
+    height: 100%;
+    background: var(--main-color);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s ease;
+}
+
+.skill-item:hover::before {
+    transform: scaleY(1);
+}
+
+/* Certificates Section Hover Effects */
+.certificate {
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    border-left: 0.3rem solid transparent;
+}
+
+.certificate:hover {
+    transform: translateY(-0.5rem);
+    border-left-color: var(--main-color);
+    box-shadow: 0 0.5rem 1.5rem rgba(124, 240, 61, 0.3);
+}
+
+.certificate:hover .btn {
+    background: var(--bg-color);
+    color: var(--main-color);
+}
+
+.certificate::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.3rem;
+    background: var(--main-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+}
+
+.certificate:hover::after {
+    transform: scaleX(1);
+}
+
+.certificate h3 {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.certificate:hover h3 {
+    color: var(--main-color);
+}
+
+/* About Section Image Fix for Mobile */
+@media (max-width: 768px) {
+    .about .container {
+        flex-direction: column;
+    }
+    
+    .about-img, .content {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+    
+    .about-img {
+        order: -1;
+        margin-bottom: 3rem;
+    }
+    
+    .about-img .img-box {
+        height: 300px;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 450px) {
+    .about-img .img-box {
+        height: 250px;
+    }
+}
+
+/* Responsive Adjustments for Skills and Certificates */
+@media (max-width: 768px) {
+    .skills-container, .certificates-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .skill-item, .certificate {
+        width: 100%;
+    }
+}
+
+/* Animation for Skills Progress Bars */
+@keyframes fill-progress {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--progress-width);
+    }
+}
+
+.progress-bar div {
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar div::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 1s ease;
+}
+
+.skill-item:hover .progress-bar div::after {
+    transform: scaleX(1);
+}
